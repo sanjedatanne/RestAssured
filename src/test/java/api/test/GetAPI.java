@@ -34,7 +34,7 @@ public class GetAPI {
 			System.out.println(name);
 		}
 	}
-
+	
 	@Test(enabled = false)
 	public void getCallBodyValidation2() {
 		RestAssured.given().log().all().get("https://reqres.in/api/unknown/2").then().log().all().statusCode(200)
