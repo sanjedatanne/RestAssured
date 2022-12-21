@@ -14,7 +14,7 @@ public class GetAPI {
 				.statusCode(200);
 	}
 
-	@Test(enabled = false)
+	@Test(enabled = true)
 	public void getCallBodyValidation() {
 		RestAssured.given().log().all().get("https://api.instantwebtools.net/v1/airlines/2").then().log().all()
 				.statusCode(200).body("name", equalTo("Singapore Airlines")).body("country", equalTo("Singapore"))
